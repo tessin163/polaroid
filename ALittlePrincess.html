@@ -10,26 +10,34 @@
 	<title>ALittlePrincess</title>
 </head>
 <style>
+	body{
+		margin:0;
+		padding:0;}
 	h1{
-	   font-size:90px; font-family:'Playfair Display',serif;color:white,margin:0;
+	   font-size:5vw; font-family:'Playfair Display',serif;color:white,margin:0;
 
 	   }
 	h3{
-		font-size: 30px;color: white; margin:10px 0;
+		font-size: 2vw;color: white; margin: 0;
 	}
 	
 	
         p{
-           font-size:18px;font-family:'Playfair Display',serif; color:white;
+           font-size:1.2vw;font-family:'Playfair Display',serif; color:white;
          }
 		 header {
 		
 		scroll-behavior:smooth;
-		height: 100vh;
-		background-image: url('alp.jpg');
+		min-height: 100vh;
+		background-image: url('alp.jpg') no-repeat center center/cover;
 		background-size: cover;
+		display: flex;  /* Enables flexbox for centering content */
+                flex-direction: column;	 
+		justify-content: center;  /* Centers content vertically */
+                align-items: center;	 
 		background-repeat: no-repeat;
 		background-attachment: fixed;
+		position:relative	 
 		 }
 		 .main{
 			width: 100%;
@@ -57,7 +65,11 @@
 			text-align: left;
 			padding: 20px;
 		 }
-		 
+		 h1, h3, p, h4 {
+            position: relative;  /* Keeps text above the overlay */
+            z-index: 2;  /* Ensures text is above overlay */
+            margin: 10px 20px;  /* Adds spacing around text */
+        }
 		 
 		
 </style>
